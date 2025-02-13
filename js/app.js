@@ -16,6 +16,8 @@ const playerOpt = document.querySelector('.player-btns');
 
 const result = document.getElementById('result');
 
+const reset = document.getElementById('reset');
+
 
 /*-- event listeners --*/
 
@@ -28,6 +30,8 @@ playerOpt.addEventListener('click', (event) => {
 
     getWinner(playerChoice, comptuerChoice);
 });
+
+reset.addEventListener('click', resetRPS);
 
 /*-- functions --*/
 
@@ -62,6 +66,11 @@ function getWinner(playerChoice, computerChoice) {
     } else {
         result.innerText = 'computer wins.';    
     }
+};
+
+function resetRPS() {
+    computerOpt.style.display = 'none';
+    result.innerHTML = '';
 };
 
 // 6. reset game
