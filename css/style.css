@@ -1,0 +1,23 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;  
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 10rem;
+    width: auto
+}
