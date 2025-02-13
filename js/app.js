@@ -14,33 +14,56 @@ const computerOpt = document.getElementById('computer-opt');
 
 const playerOpt = document.querySelector('.player-btns');
 
+const result = document.getElementById('result');
+
 
 /*-- event listeners --*/
 
 playerOpt.addEventListener('click', (event) => {
     let playerChoice = event.target.id;
-    console.log(playerChoice);
+    // console.log(playerChoice);
+
+    let comptuerChoice = getComputerChoice();
+    // console.log(comptuerChoice);
+
+    getWinner(playerChoice, comptuerChoice);
 });
 
 /*-- functions --*/
 
-init(); 
-
-function init() {
-    getComputerChoice();
-};
-
 function getComputerChoice() {
     let randomOptIndex = Math.floor(Math.random() * Object.keys(opt).length) + 1;
     let computerChoice = computerOpt.innerText = opt[randomOptIndex];
-    console.log(computerChoice);
+    // console.log(computerChoice);
+    return computerChoice;
 };
 
+function getWinner(playerChoice, computerChoice) {
+    // if playerChoice === computerChoice --> tie
+    // if playerChoice === rock && computerChoice === scissors || lizard --> player wins
+    // if playerChoice === paper && computerChoice === rock || spock --> player wins
+    // if playerChoice === scissors && computerChoice === paper || lizard --> player wins
+    // if playerChoice === lizard && computerChoice === spock || paper --> player wins
+    // if playerChoice === spock && computerChoice === scissors || rock --> player wins
+    // else computer wins
 
-// 2. get user to be able to select a option 
-// 3. compare the two options
-// 4. select winner 
-// 5. display winner
+    if (playerChoice === computerChoice) {
+        result.innerText = 'tie.';
+    } else if (playerChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'lizard')) {
+        result.innerText = 'player wins.';
+    } else if (playerChoice === 'paper' && (computerChoice === 'rock' || computerChoice === 'spock')) {
+        result.innerText = 'player wins.';
+    } else if (playerChoice === 'scissors' && (computerChoice === 'paper' || computerChoice === 'lizard')) {
+        result.innerText = 'player wins.';
+    } else if (playerChoice === 'lizard' && (computerChoice === 'spock' || computerChoice === 'paper')) {
+        result.innerText = 'player wins.';
+    } else if (playerChoice === 'spock' && (computerChoice === 'scissors' || computerChoice === 'rock')) {
+        result.innerText = 'player wins.';
+    } else {
+        result.innerText = 'computer wins.';    
+    }
+};
+
 // 6. reset game
 // icebox --> timer 
 // icebox --> score board
