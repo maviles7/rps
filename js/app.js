@@ -18,17 +18,20 @@ const result = document.getElementById('result');
 
 const reset = document.getElementById('reset');
 
-
 /*-- event listeners --*/
 
 playerOpt.addEventListener('click', (event) => {
     let playerChoice = event.target.id;
-    // console.log(playerChoice);
-
     let comptuerChoice = getComputerChoice();
-    // console.log(comptuerChoice);
 
+    computerOpt.innerText = comptuerChoice;
     getWinner(playerChoice, comptuerChoice);
+
+    Array.from(playerOpt.children).forEach(button => {
+        if (button.id !== playerChoice) {
+            button.style.visibility = 'hidden';
+        }
+    });
 });
 
 reset.addEventListener('click', resetRPS);
@@ -37,8 +40,8 @@ reset.addEventListener('click', resetRPS);
 
 function getComputerChoice() {
     let randomOptIndex = Math.floor(Math.random() * Object.keys(opt).length) + 1;
-    let computerChoice = computerOpt.innerText = opt[randomOptIndex];
-    // console.log(computerChoice);
+    let computerChoice = opt[randomOptIndex];
+    
     return computerChoice;
 };
 
@@ -69,10 +72,13 @@ function getWinner(playerChoice, computerChoice) {
 };
 
 function resetRPS() {
-    computerOpt.style.display = 'none';
+    computerOpt.innerHTML = '';
     result.innerHTML = '';
+
+    Array.from(playerOpt.children).forEach(button => {
+        button.style.visibility = 'visible';
+    });
 };
 
-// 6. reset game
 // icebox --> timer 
 // icebox --> score board

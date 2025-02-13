@@ -1,4 +1,4 @@
-#rps
+# rps
 
 ## technically rock, paper, scissors lizard, spock by sheldon cooper of the big bang theory
 
