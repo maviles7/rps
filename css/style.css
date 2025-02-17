@@ -31,6 +31,10 @@ html, body {
     width: 5rem;
 }
 
+.results {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }

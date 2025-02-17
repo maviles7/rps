@@ -12,7 +12,7 @@ But was it fun to build? Also yes.
 
 So have fun with it!
 
-### depoy link 
+### play [here](https://maviles7.github.io/rps/)
 
 ### rules 
 - rock crushes scissors 
