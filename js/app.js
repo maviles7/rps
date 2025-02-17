@@ -8,6 +8,10 @@ const opt = {
     5: 'spock'
 }
 
+/*-- state elements (variables) --*/
+
+let score; 
+
 /*-- cached elements --*/
 
 const computerOpt = document.getElementById('computer-opt');
@@ -44,6 +48,11 @@ playerOpt.addEventListener('click', (event) => {
 reset.addEventListener('click', resetRPS);
 
 /*-- functions --*/
+init(); 
+
+function inti() {
+    score = 0;
+};
 
 function getComputerChoice() {
     let randomOptIndex = Math.floor(Math.random() * Object.keys(opt).length) + 1;

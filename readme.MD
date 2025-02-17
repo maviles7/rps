@@ -3,10 +3,16 @@
 ## technically rock, paper, scissors lizard, spock by sheldon cooper of the big bang theory
 
 ### summary 
-insert summary 
+This was inspired by my love of The Big Bang Theory. Honestly, I didn’t even know if it was a thing outside of the show. I feel a sense of kinship with Sheldon—not just because we’re both from East Texas, but also because of the experience of being different and having to find and forge our own way in society.
+
+The humor, friendship, found family, and growth in the show hold a special place in my heart, and I hope that comes through in this project.
+
+Is it a simple one? Yes.
+But was it fun to build? Also yes.
+
+So have fun with it!
 
 ### depoy link 
-insert depoly link
 
 ### rules 
 - rock crushes scissors 
