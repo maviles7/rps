@@ -13,11 +13,29 @@ html, body {
     text-align: center;  
 }
 
+.player-btns {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.computer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.reset-btn {
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+}
+
 a {
     text-decoration: none;
 }
 
 img {
-    height: 10rem;
+    height: 20vh;
     width: auto
 }

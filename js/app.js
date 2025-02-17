@@ -11,6 +11,7 @@ const opt = {
 /*-- cached elements --*/
 
 const computerOpt = document.getElementById('computer-opt');
+const computerChoiceTxt = document.getElementById('computer-choice');
 
 const playerOpt = document.querySelector('.player-btns');
 
@@ -30,6 +31,8 @@ playerOpt.addEventListener('click', (event) => {
 
     computerOpt.innerText = comptuerChoice;
     getWinner(playerChoice, comptuerChoice);
+
+    computerChoiceTxt.style.visibility = 'visible';
 
     Array.from(playerOpt.children).forEach(button => {
         if (button.id !== playerChoice) {
@@ -78,6 +81,8 @@ function getWinner(playerChoice, computerChoice) {
 function resetRPS() {
     computerOpt.innerHTML = '';
     result.innerHTML = '';
+
+    computerChoiceTxt.style.visibility = 'hidden';
 
     Array.from(playerOpt.children).forEach(button => {
         button.style.visibility = 'visible';
