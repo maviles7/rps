@@ -21,7 +21,11 @@ const reset = document.getElementById('reset');
 /*-- event listeners --*/
 
 playerOpt.addEventListener('click', (event) => {
-    let playerChoice = event.target.id;
+    let target = event.target;
+    if (target.tagName === 'IMG') {
+        target = target.parentElement;
+    }
+    let playerChoice = target.id;
     let comptuerChoice = getComputerChoice();
 
     computerOpt.innerText = comptuerChoice;
